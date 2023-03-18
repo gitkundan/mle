@@ -25,6 +25,11 @@ In the following code float will get converted to integer
 ```python
 np.array([45.67,True],dtype=np.int8)
 ```
+Alternative way to do type coercision
+```python
+np.array([9,1.12,True]).astype('<U5')
+```
+
 
 
 ## Numpy functions
