@@ -30,8 +30,6 @@ Alternative way to do type coercision
 np.array([9,1.12,True]).astype('<U5')
 ```
 
-
-
 ## Numpy functions
 ### 1. flatten() : 
     convert multi-dimensional array to scalar (i.e.1D)
@@ -45,7 +43,20 @@ array.flatten() ==> array([1, 2, 5, 6, 6, 6])
 array=np.array([[1,2],[5,6],[6,6]])
 array.reshape((1,6))
 ```
+### 3. slicing:
+    vector : use [r:c] format
+    tensor : use [r:c,r:c] e.g. sudoku_game[3:6,2:4] will select a middle square
+            from the overall sudoku 2D tensor
+
+        Create an array of trunk diameters with even row indices from 50 to 100 
+        inclusive
+
+            every_other_diameter = tree_census[50:101:2,2]
 
 
+### 4. sorting:
+    np.sort(array,index=0) ; 1: row, 2:column
+    sorted_trunk_diameters = np.sort(tree_census[:, 2])
 
-
+    Cant do descending sort. To sort tensors specify column order:
+    np.sort(a, order=['age', 'height'])
