@@ -53,10 +53,17 @@ array.reshape((1,6))
 
             every_other_diameter = tree_census[50:101:2,2]
 
-
 ### 4. sorting:
     np.sort(array,index=0) ; 1: row, 2:column
     sorted_trunk_diameters = np.sort(tree_census[:, 2])
 
     Cant do descending sort. To sort tensors specify column order:
     np.sort(a, order=['age', 'height'])
+
+### 5. filtering by boolean masks:
+    a.k.a Fancy Filtering
+
+
+### 6. filtering by np.where: 
+    returns indices
+
